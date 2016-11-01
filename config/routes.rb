@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
+
+  get '/admin' => 'admins#admin_home'
+
   root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
