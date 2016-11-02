@@ -1,3 +1,9 @@
-<% @coincidents.each do |coincident| %>
-  <%= coincident.name %>
-<% end %>
+<section>
+  <div class="container">
+    <% @coincidents.each do |coincident| %>
+      <p>
+        <%= coincident.name %>
+      </p>
+    <% end %>
+  </div>
+</section>
