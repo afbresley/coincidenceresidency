@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :coincidents
+
   devise_for :admins
 
   get '/admin' => 'admins#admin_home'
