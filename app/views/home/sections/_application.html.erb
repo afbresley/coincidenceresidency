@@ -84,14 +84,21 @@
           <h3>
             Personal Info (Required)
           </h3>
-          <p class="text-faded">
+          <p class="text-faded small-text">
             Please let us know who you are! Our main means of contact will be e-mail, so please check it (and your spam folder) regularly.
           </p>
           <%= f.label :name, class: 'fugu-width' %>
           <%= f.text_field :name, class: 'form-control', :required => true %>
           <br />
+
           <%= f.label :email, class: 'fugu-width m-5-top' %>
           <%= f.text_field :email, class: 'form-control m-5-top', :required => true %>
+        </div>
+        <div class="col-md-6">
+          <h3>
+            &nbsp;
+          </h3>
+
           <br />
           <%= f.label :birthday, :required => true, class: 'fugu-width m-5-top' %>
           <%= f.date_field :birthday, class: 'form-control m-5-top', :required => true %>
@@ -107,10 +114,10 @@
           <h3>
             Portfolio
           </h3>
-          <p class="text-faded">
+          <p class="text-faded small-text">
             We'd like to get a sense of what you do and what you are interested in. While we are most interested in your Work Samples, a Website and CV/Resume will help us get a clearer picture of what you do.
           </p>
-          <p class="text-faded">
+          <p class="text-faded small-text">
             *All documents should be linked to via resources like Dropbox and Google Drive. Make sure the documents are accessible to us to view.*
           </p>
           <p class="text-faded small-text">
