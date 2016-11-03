@@ -2,64 +2,193 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">
-          Application
+        <h2 class="section-heading text-faded">
+          APPLICATION
         </h2>
         <hr class="primary">
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="row text-center" >
-      <!-- add back in 'remote true' and coffee script to make cleaner -->
-      <%= form_for(@coincident, remote: true) do |f| %>
-        <h3>
-          Personal Info
-        </h3>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-        <br />
-        <%= f.label :email %>
-        <%= f.text_field :email %>
-        <br />
-        <%= f.label :birthday %>
-        <%= f.date_field :birthday %>
-        <br />
-        <%= f.label :address %>
-        <%= f.text_area :address %>
-
-        <h3>
-          Portfolio
-        </h3>
-        <%= f.label 'Work Sample 1' %>
-        <%= f.text_field :link1 %>
-        <br />
-        <%= f.label 'Work Sample 2' %>
-        <%= f.text_field :link2 %>
-        <br />
-        <%= f.label 'Work Sample 3' %>
-        <%= f.text_field :link3 %>
-        <br />
-        <%= f.label :website %>
-        <%= f.text_field :website %>
-        <br />
-        <%= f.label 'CV / Resume' %>
-        <%= f.text_field :cv_resume_link %>
-
-        <h3>
-          Proposal
-        </h3>
-        <%= f.label 'Instrument(s) that you play' %>
-        <%= f.text_field :instruments %>
-        <br />
-        <%= f.label :why_apply %>
-        <%= f.text_area :why_apply %>
-        <br />
-        <%= f.label :project_description %>
-        <%= f.text_area :project_description %>
-
-        <%= f.submit %>
-      <% end %>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="text-faded">
+          Fill out your application here. We are most interested in your project proposal for the Residency. Our main advice is: think big, think radical, and be idealistic. Your portfolio functions as supplementary material that will give us a better chance to get to know you as an artist.
+        </p>
+      </div>
+      <!-- <div class="col-md-6 text-center">
+        <p> timeline </p>
+        <p>
+          Due December 10th, 2016
+        </p>
+        <p>
+          Acceptance (or not) sent via e-mail December 15th, 2016
+        </p>
+        <p>
+          Confirmation of Attendance due December 20th, 2016
+        </p>
+      </div> -->
     </div>
+    <br />
+    <div class="row">
+      <div class="col-md-6">
+        <ul>
+          <li>
+            <p class="text-faded">
+              Applications due December 10th, 2016
+            </p>
+          </li>
+          <li>
+            <p class="text-faded">
+              Acceptance (or not) sent via e-mail December 15th, 2016
+            </p>
+          </li>
+          <li>
+            <p class="text-faded">
+              Confirmation of Attendance due December 20th, 2016
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <li>
+            <p class="text-faded">
+              Arrive on January 24th, 2017 in the afternoon
+            </p>
+          </li>
+          <li>
+            <p class="text-faded">
+              Depart anytime on January 30th, 2017
+            </p>
+          </li>
+        <ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row text-center">
+      <a class="btn btn-primary btn-fugu" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        OPEN APPLICATION
+      </a>
+    </div>
+  </div>
+
+  <div class="container collapse" id="collapseExample"> 
+    <br />
+    <hr />
+    <%= form_for(@coincident, remote: true, :html => {:class => "form-inline"} ) do |f| %>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>
+            Personal Info (Required)
+          </h3>
+          <p class="text-faded">
+            Please let us know who you are! Our main means of contact will be e-mail, so please check it (and your spam folder) regularly.
+          </p>
+          <%= f.label :name, class: 'fugu-width' %>
+          <%= f.text_field :name, class: 'form-control', :required => true %>
+          <br />
+          <%= f.label :email, class: 'fugu-width m-5-top' %>
+          <%= f.text_field :email, class: 'form-control m-5-top', :required => true %>
+          <br />
+          <%= f.label :birthday, :required => true, class: 'fugu-width m-5-top' %>
+          <%= f.date_field :birthday, class: 'form-control m-5-top', :required => true %>
+          <br />
+          <%= f.label :address, :required => true, class: 'fugu-width m-5-top' %>
+          <%= f.text_area :address, class: 'form-control m-5-top', :required => true %>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          <h3>
+            Portfolio
+          </h3>
+          <p class="text-faded">
+            We'd like to get a sense of what you do and what you are interested in. While we are most interested in your Work Samples, a Website and CV/Resume will help us get a clearer picture of what you do.
+          </p>
+          <p class="text-faded">
+            *All documents should be linked to via resources like Dropbox and Google Drive. Make sure the documents are accessible to us to view.*
+          </p>
+          <p class="text-faded small-text">
+            Please provide your website if you have it. If you do not, that is okay, it will not negatively affect your application.
+          </p>
+          <%= f.label 'Website (Optional)' %>
+          <%= f.text_field :website, class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <div class="hidden-xs hidden-sm">
+            <h3>
+              &nbsp;
+            </h3>
+          </div>
+          <p class="text-faded small-text">
+            You may provide 1 - 3 Work Samples, in whatever form/format you feel best represents you. To note: we only require 1 Work Sample, and the number of Work Samples you link above that will not affect your application chances (apart from giving us more to get to know you).
+          </p>
+          <%= f.label 'Work Sample 1, Link (Required)', class: ' m-5-top', :required => true %>
+          <%= f.text_field :link1, class: 'form-control', :required => true %>
+          <br />
+          <%= f.label 'Work Sample 2, Link (Optional)', class: ' m-5-top'  %>
+          <%= f.text_field :link2, class: 'form-control m-5-top' %>
+          <br />
+          <%= f.label 'Work Sample 3, Link (Optional)', class: ' m-5-top'  %>
+          <%= f.text_field :link3, class: 'form-control m-5-top' %>
+          <br />
+
+          <br />
+          <p class="text-faded small-text">
+            Finally, we'd like to see a CV or Resume (or, if you feel better represented by an alternate document that can take the place of a CV or Resume, we welcome that). Any length is fine.
+          </p>
+          <%= f.label 'CV, Resume, or Other (Required)' %>
+          <%= f.text_field :cv_resume_link, class: 'form-control' %>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          <h3>
+            Proposal
+          </h3>
+          <p class="text-faded small-text">
+            Give us an idea of the work that you propose to compose for the Residency. Anything from a couple paragraph text description to a draft of a score will do just fine. This will be the work that you will bring - completed - to the Residency to workshop and perform, and also as a means for starting discussion among the group.
+          </p>
+          <p class="text-faded small-text">
+            Please bear in mind that the work you will be proposing will be workshopped and performed by the co-incidence ensemble, i.e., the other guest artists, resident artist, directors, and potentially members of the local community (at least 9 people - 6 guest artists, 1 resident artist, 2 directors). Moreover, you will have the opportunity to have your work performed on Sunday for an extended duration as the final performance is for an undetermined length of time. We imagine works lasting anywhere from, though not limited to, an hour, 2 hours, 3 hours, 4 hours, etc.
+          </p>
+          <p class="text-faded small-text">
+            Due to these factors, we encourage works of open (and malleable) instrumentation and of open duration. This is by no means a requirement.
+          </p>
+          <p class="text-faded small-text">
+            Also, though the performances will take place at Washington Street Art Center, you are not confined to that space (though, it will be cold and snowy in Boston, so please be aware of this!).
+          </p>
+          <p class="text-faded small-text">
+            To note: there will be no piano available in the space.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h3>
+            &nbsp;
+          </h3>
+          <%= f.label 'Instrument(s) that you are willing to play as part of the co-incidence ensemble', :required => true %>
+          <%= f.text_field :instruments, class: 'form-control', :required => true %>
+          <br />
+          <br />
+          <%= f.label 'Why are you interested in applying? (concise response, please)', :required => true,class: ' m-5-top' %>
+          <%= f.text_area :why_apply, class: 'form-control my-text-box', :required => true %>
+          <br />
+          <br />
+          <%= f.label 'Link to your Project Description', :required => true, class: ' m-5-top' %>
+          <%= f.text_field :project_description, class: 'form-control m-5-top', :required => true %>
+
+          <br />
+          <br />
+          <%= f.submit 'SUBMIT APPLICATION', class: 'btn btn-secondary btn-fugu' %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </section>

@@ -22,6 +22,10 @@ h4 {
   margin-bottom: 5px !important;
 }
 
+.reddish {
+  color: #F05F40 !important;
+}
+
 h5 {
   margin-top: 0 !important;
 }
@@ -40,4 +44,27 @@ h5 {
 
 .sorry {
   color: #bb0000
+}
+
+.small-text {
+  font-size: 13px
+}
+
+.m-5-top {
+  margin-top: 5px;
+}
+
+.fugu-width {
+  width: 60px
+}
+
+.my-text-box {
+  width: 100% !important;
+  height: 120px !important;
+  resize: none;
+}
+
+.btn-fugu {
+  background-color: #F05F40 !important;
+  color: white;
 }
