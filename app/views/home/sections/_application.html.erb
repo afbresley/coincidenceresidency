@@ -133,15 +133,15 @@
             </h3>
           </div>
           <p class="text-faded small-text">
-            You may provide 1 - 3 Work Samples, in whatever form/format you feel best represents you. To note: we only require 1 Work Sample, and the number of Work Samples you link above that will not affect your application chances (apart from giving us more to get to know you).
+            You may provide 1 - 3 Work Samples, in whatever form/format you feel best represents you. To note: we only require 1 Work Sample, and the number of Work Samples you submit will not affect negatively affect application.
           </p>
-          <%= f.label 'Work Sample 1, Link (Required)', class: ' m-5-top', :required => true %>
+          <%= f.label :link1, 'Work Sample 1, Link (Required)', class: ' m-5-top', :required => true %>
           <%= f.text_field :link1, class: 'form-control', :required => true %>
           <br />
-          <%= f.label 'Work Sample 2, Link (Optional)', class: ' m-5-top'  %>
+          <%= f.label :link2, 'Work Sample 2, Link (Optional)', class: ' m-5-top'  %>
           <%= f.text_field :link2, class: 'form-control m-5-top' %>
           <br />
-          <%= f.label 'Work Sample 3, Link (Optional)', class: ' m-5-top'  %>
+          <%= f.label :link3, 'Work Sample 3, Link (Optional)', class: ' m-5-top'  %>
           <%= f.text_field :link3, class: 'form-control m-5-top' %>
           <br />
 
@@ -149,7 +149,7 @@
           <p class="text-faded small-text">
             Finally, we'd like to see a CV or Resume (or, if you feel better represented by an alternate document that can take the place of a CV or Resume, we welcome that). Any length is fine.
           </p>
-          <%= f.label 'CV, Resume, or Other (Required)' %>
+          <%= f.label :cv_resume_link, "CV, Resume, or Other (Required)" %>
           <%= f.text_field :cv_resume_link, class: 'form-control' %>
         </div>
       </div>
@@ -161,10 +161,10 @@
             Proposal
           </h3>
           <p class="text-faded small-text">
-            Give us an idea of the work that you propose to compose for the Residency. Anything from a couple paragraph text description to a draft of a score will do just fine. This will be the work that you will bring - completed - to the Residency to workshop and perform, and also as a means for starting discussion among the group.
+            Give us an idea of the work that you propose to compose for the Residency. Anything from a text description to a draft of a score will do just fine. This will be the work that you will bring - completed - to the Residency to workshop and perform, and also as a means for starting discussion among the group.
           </p>
           <p class="text-faded small-text">
-            Please bear in mind that the work you will be proposing will be workshopped and performed by the co-incidence ensemble, i.e., the other guest artists, resident artist, directors, and potentially members of the local community (at least 9 people - 6 guest artists, 1 resident artist, 2 directors). Moreover, you will have the opportunity to have your work performed on Sunday for an extended duration as the final performance is for an undetermined length of time. We imagine works lasting anywhere from, though not limited to, an hour, 2 hours, 3 hours, 4 hours, etc.
+            Please bear in mind that the work you will be proposing will be workshopped and performed by the co-incidence ensemble, i.e., the other guest artists, resident artist, directors, and potentially members of the local community (at least 9 people: 6 guest artists, 1 resident artist, 2 directors). Moreover, you will have the opportunity to have your work performed on Sunday for an extended duration as the final performance is for an undetermined length of time. We imagine works lasting anywhere from, though not limited to, an hour, 2 hours, 3 hours, 4 hours, etc.
           </p>
           <p class="text-faded small-text">
             Due to these factors, we encourage works of open (and malleable) instrumentation and of open duration. This is by no means a requirement.
