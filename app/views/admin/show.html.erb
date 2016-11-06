@@ -2,18 +2,126 @@
   <div class="container">
     <div class="row text-center">
       <h1>
-        admin section!
+        admin section! 
       <h1>
+    </div>
+    <div class="row text-center">
+      <h4>
+        don't view on mobile. it'll suck
+      </h4>
     </div>
   </div>
 </section
 
 <section>
-  <div class="container">
-    <% @coincidents.each do |coincident| %>
-      <p>
-        <%= coincident.name %>
-      </p>
-    <% end %>
-  </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+            <th>
+              name
+            </th>
+            <th>
+              email
+            </th>
+            <th>
+              address
+            </th>
+            <th>
+              birthday
+            </th>
+            <th>
+              project_description
+            </th>
+            <th>
+              portfolio links
+            </th>
+            <th>
+              website
+            </th>
+            <th>
+              cv_resume_link
+            </th>
+            <th>
+              why_apply
+            </th>
+            <th>
+              instruments
+            </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @coincidents.each do |coincident| %>
+          <tr>
+            <td>
+              <%= coincident.name %>
+            </td>
+            <td>
+              <%= coincident.email %>
+            </td>
+            <td>
+              <%= coincident.address %>
+            </td>
+            <td>
+              <%= coincident.birthday %>
+            </td>
+            <td>
+              <%= coincident.project_description %>
+            </td>
+            <td>
+              <%= coincident.link1 %>
+              <br />
+              <%= coincident.link2 != '' ? coincident.link2 : '-' %>
+              <br />
+              <%= coincident.link3 != '' ? coincident.link3 : '-' %>
+            </td>
+            <td>
+              <%= coincident.website != '' ? coincident.website : '-' %>
+            </td>
+            <td>
+              <%= coincident.cv_resume_link %>
+            </td>
+            <td>
+              <%= coincident.why_apply %>
+            </td>
+            <td>
+              <%= coincident.instruments %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+      <thead>
+        <tr>
+            <th>
+              name
+            </th>
+            <th>
+              email
+            </th>
+            <th>
+              address
+            </th>
+            <th>
+              birthday
+            </th>
+            <th>
+              project_description
+            </th>
+            <th>
+              portfolio links
+            </th>
+            <th>
+              website
+            </th>
+            <th>
+              cv_resume_link
+            </th>
+            <th>
+              why_apply
+            </th>
+            <th>
+              instruments
+            </th>
+        </tr>
+      </thead>
+    </table>
 </section>
