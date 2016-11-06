@@ -65,20 +65,20 @@
               <%= coincident.birthday %>
             </td>
             <td>
-              <%= coincident.project_description %>
+              <%= link_to(coincident.project_description, "http://#{coincident.project_description}", :target => "_blank" ) %>
             </td>
             <td>
-              <%= coincident.link1 %>
+              <%= link_to(coincident.link1, "http://#{coincident.link1}", :target => "_blank" ) %>
               <br />
-              <%= coincident.link2 != '' ? coincident.link2 : '-' %>
+              <%= coincident.link2 != '' ? link_to(coincident.link2, "http://#{coincident.link2}", :target => "_blank") : '-' %>
               <br />
-              <%= coincident.link3 != '' ? coincident.link3 : '-' %>
+              <%= coincident.link3 != '' ? link_to(coincident.link3, "http://#{coincident.link3}", :target => "_blank") : '-' %>
             </td>
             <td>
-              <%= coincident.website != '' ? coincident.website : '-' %>
+              <%= coincident.website != '' ? link_to(coincident.website, "http://#{coincident.website}", :target => "_blank") : '-' %>
             </td>
             <td>
-              <%= coincident.cv_resume_link %>
+              <%= link_to coincident.cv_resume_link, "http://#{coincident.cv_resume_link}", :target => "_blank" %>
             </td>
             <td>
               <%= coincident.why_apply %>
