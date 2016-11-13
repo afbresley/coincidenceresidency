@@ -47,6 +47,8 @@
             <th>
               instruments
             </th>
+            <th>
+            </th>
         </tr>
       </thead>
       <tbody>
@@ -86,41 +88,47 @@
             <td>
               <%= coincident.instruments %>
             </td>
+            <td>
+              This is permanent: be VERY careful.
+              <%= link_to "Delete Application", coincident_path(coincident.id), method: 'delete', class: 'btn btn-danger' %>
+            </td>
           </tr>
         <% end %>
       </tbody>
       <thead>
         <tr>
-            <th>
-              name
-            </th>
-            <th>
-              email
-            </th>
-            <th>
-              address
-            </th>
-            <th>
-              birthday
-            </th>
-            <th>
-              project_description
-            </th>
-            <th>
-              portfolio links
-            </th>
-            <th>
-              website
-            </th>
-            <th>
-              cv_resume_link
-            </th>
-            <th>
-              why_apply
-            </th>
-            <th>
-              instruments
-            </th>
+          <th>
+            name
+          </th>
+          <th>
+            email
+          </th>
+          <th>
+            address
+          </th>
+          <th>
+            birthday
+          </th>
+          <th>
+            project_description
+          </th>
+          <th>
+            portfolio links
+          </th>
+          <th>
+            website
+          </th>
+          <th>
+            cv_resume_link
+          </th>
+          <th>
+            why_apply
+          </th>
+          <th>
+            instruments
+          </th>
+          <th>
+          </th>
         </tr>
       </thead>
     </table>
