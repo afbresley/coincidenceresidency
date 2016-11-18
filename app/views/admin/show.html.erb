@@ -18,6 +18,9 @@
       <thead>
         <tr>
             <th>
+              when applied
+            </th>
+            <th>
               name
             </th>
             <th>
@@ -54,6 +57,9 @@
       <tbody>
         <% @coincidents.each do |coincident| %>
           <tr>
+            <td>
+              <%= coincident.created_at.strftime("%B %d, %Y") %>
+            </td>
             <td>
               <%= coincident.name %>
             </td>
@@ -97,6 +103,9 @@
       </tbody>
       <thead>
         <tr>
+          <th>
+            when applied
+          </th>
           <th>
             name
           </th>
