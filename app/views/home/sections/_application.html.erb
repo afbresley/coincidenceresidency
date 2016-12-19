@@ -69,13 +69,14 @@
 
   <div class="container">
     <div class="row text-center">
-      <a class="btn btn-primary btn-fugu" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        OPEN APPLICATION
+      <a class="btn btn-primary btn-fugu" data-toggle="collapse" href="#collapseExampleDisabled" aria-expanded="false" aria-controls="collapseExample">
+        APPLICATIONS ARE CLOSED
       </a>
     </div>
   </div>
 
-  <div class="container collapse" id="collapseExample"> 
+
+  <div class="container collapse hide" id="collapseExample"> 
     <br />
     <hr />
     <%= form_for(@coincident, remote: true, :html => {:class => "form-inline"} ) do |f| %>
