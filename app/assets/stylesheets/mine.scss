@@ -9,7 +9,7 @@
   } 
 }
 
-#details {
+#details, #who, #about {
   background-color: #eee;
 }
 
@@ -124,5 +124,15 @@ h5 {
 #who {
   h4 {
     color: #222222 !important;
+  }
+}
+
+.business-logo {
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+  img {
+    height: 100%;
   }
 }
