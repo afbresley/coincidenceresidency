@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   devise_for :admins
 
   get '/admin' => 'admins#admin_home'
+  get '/2017-season' => 'home#season2017'
+  get '/home/2017-season' => 'home#season2017'
+  get '/home' => 'home#index'
 
   root to: "home#index"
 
