@@ -6,4 +6,7 @@ class HomeController < ApplicationController
   def season2017
   end
 
+  def joachim
+  end
+
 end

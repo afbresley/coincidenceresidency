@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get '/2017-season' => 'home#season2017'
   get '/home/2017-season' => 'home#season2017'
   get '/home' => 'home#index'
-
+  get '/joachim' => 'home#joachim'
+  
   root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
