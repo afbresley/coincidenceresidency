@@ -20,41 +20,41 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-            <th>
-              when applied
-            </th>
-            <th>
-              name
-            </th>
-            <th>
-              email
-            </th>
-            <th>
-              address
-            </th>
-            <th>
-              birthday
-            </th>
-            <th>
-              project_description
-            </th>
-            <th>
-              portfolio links
-            </th>
-            <th>
-              website
-            </th>
-            <th>
-              cv_resume_link
-            </th>
-            <th>
-              why_apply
-            </th>
-            <th>
-              instruments
-            </th>
-            <th>
-            </th>
+          <th>
+            when applied
+          </th>
+          <th>
+            name
+          </th>
+          <th>
+            email
+          </th>
+          <th>
+            address
+          </th>
+          <th>
+            birthday
+          </th>
+          <th>
+            website
+          </th>
+          <th>
+            tell_us
+          </th>
+          <th>
+            link_to_prompt
+          </th>
+          <th>
+            portfolio links
+          </th>
+          <th>
+            instruments
+          </th>
+          <th>
+            how_did_you_hear
+          </th>
+          <th>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -76,7 +76,13 @@
               <%= coincident.birthday %>
             </td>
             <td>
-              <%= link_to(coincident.project_description, "http://#{coincident.project_description}", :target => "_blank" ) %>
+              <%= coincident.website != '' ? link_to(coincident.website, "http://#{coincident.website}", :target => "_blank") : '-' %>
+            </td>
+            <td>
+              <%= coincident.tell_us %>
+            </td>
+            <td>
+              <%= link_to coincident.link_to_prompt, "http://#{coincident.link_to_prompt}", :target => "_blank" %>
             </td>
             <td>
               <%= link_to(coincident.link1, "http://#{coincident.link1}", :target => "_blank" ) %>
@@ -86,20 +92,14 @@
               <%= coincident.link3 != '' ? link_to(coincident.link3, "http://#{coincident.link3}", :target => "_blank") : '-' %>
             </td>
             <td>
-              <%= coincident.website != '' ? link_to(coincident.website, "http://#{coincident.website}", :target => "_blank") : '-' %>
-            </td>
-            <td>
-              <%= link_to coincident.cv_resume_link, "http://#{coincident.cv_resume_link}", :target => "_blank" %>
-            </td>
-            <td>
-              <%= coincident.why_apply %>
-            </td>
-            <td>
               <%= coincident.instruments %>
             </td>
             <td>
+              <%= coincident.how_did_you_hear %>
+            </td>
+            <td>
               This is permanent: be VERY careful.
-              <%= link_to "Delete Application", coincident_path(coincident.id), method: 'delete', class: 'btn btn-danger' %>
+              <%= link_to "Delete Application", coincident_two_path(coincident.id), method: 'delete', class: 'btn btn-danger' %>
             </td>
           </tr>
         <% end %>
@@ -122,22 +122,22 @@
             birthday
           </th>
           <th>
-            project_description
+            website
+          </th>
+          <th>
+            tell_us
+          </th>
+          <th>
+            link_to_prompt
           </th>
           <th>
             portfolio links
           </th>
           <th>
-            website
-          </th>
-          <th>
-            cv_resume_link
-          </th>
-          <th>
-            why_apply
-          </th>
-          <th>
             instruments
+          </th>
+          <th>
+            how_did_you_hear
           </th>
           <th>
           </th>

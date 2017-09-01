@@ -9,7 +9,9 @@ class AdminsController < ApplicationController
   def admin_home
     # redirect_to action: "show", id: current_admin.id
 
-    @coincidents = Coincident.all.order(:name)
+    # @coincidents = Coincident.all.order(:name)
+
+    @coincidents = CoincidentTwo.all.order(:name)
     render 'admin/show', admin: current_admin.id, @coincidents => @coincidents
   end
 

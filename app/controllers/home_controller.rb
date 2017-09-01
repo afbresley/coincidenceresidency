@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @coincident = Coincident.new
+    # @coincident = Coincident.new
+    @coincidentTwo = CoincidentTwo.new
   end
 
   def season2017

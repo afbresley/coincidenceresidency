@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :coincidents
+  resources :coincident_twos
 
   devise_for :admins
 
