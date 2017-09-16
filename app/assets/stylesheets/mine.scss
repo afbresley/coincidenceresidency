@@ -137,6 +137,8 @@ h5 {
   padding-right: 15px;
   display: inline-block;
   img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
     height: 100%;
   }
 }
