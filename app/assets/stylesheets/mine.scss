@@ -145,7 +145,7 @@ h5 {
 }
 
 #intro2018 {
-  background: #eee;
+  background: #fff;
 }
 
 .tertiary {
@@ -160,4 +160,55 @@ h5 {
 
 .form2 {
   width: 100% !important;
+}
+
+.eventUl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+.eventWhen {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.eventDescription {
+  text-align: left;
+  font-size: 12px;
+}
+
+.eventWhere {
+  text-align: left;
+  font-size: 12px;
+}
+
+.fbLinkMeow {
+}
+
+.eventHr {
+  border: 1px solid #337ab7;
+  max-width: 500px;
+}
+
+.pad-15-bot {
+  padding-bottom: 15px;
+}
+
+.joachimDates {
+  font-size: 14px;
+}
+
+.joachimList {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 15px;
+  
 }
