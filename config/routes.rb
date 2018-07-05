@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   get '/admin' => 'admins#admin_home'
   get '/2017-season' => 'home#season2017'
+  get '/2018-season' => 'home#season2018'
   get '/home/2017-season' => 'home#season2017'
+  get '/home/2018-season' => 'home#season2018'
   get '/home' => 'home#index'
   get '/joachim' => 'home#joachim'
   
