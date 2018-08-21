@@ -238,3 +238,15 @@ h5 {
 .cd-links {
   font-size: 18px;
 }
+
+@media (min-width: 768px) {
+  .form-inline .form-control {
+    width: 100% !important;
+  }
+}
+
+textarea.form-control {
+  height: 60px !important;
+}
+
+

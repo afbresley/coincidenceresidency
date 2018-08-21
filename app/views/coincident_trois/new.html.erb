@@ -1,0 +1,198 @@
+<section id="application">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-faded">
+          2019 APPLICATION
+        </h2>
+        <hr class="primary">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="text-faded">
+          <!-- Fill out your application here. We are most interested in your project proposal for the festival. Our main advice is: think big, think radical, and be idealistic. Your portfolio functions as supplementary material that will give us a better chance to get to know you as an artist. -->
+
+          Intro text here?? 
+
+        </p>
+      </div>
+      <!-- <div class="col-md-6 text-center">
+        <p> timeline </p>
+        <p>
+          Due December 10th, 2016
+        </p>
+        <p>
+          Acceptance (or not) sent via e-mail December 15th, 2016
+        </p>
+        <p>
+          Confirmation of Attendance due December 20th, 2016
+        </p>
+      </div> -->
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="text-faded">
+          <h3>Important dates</h3>
+        </p>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <ul style="list-style: none;">
+          <li>
+            <p class="text-faded">
+              Applications due on November 1st, 2018, by 11:59 PM (EST)
+            </p>
+          </li>
+          <li>
+            <p class="text-faded">
+              Acceptance (or not) sent via e-mail November 12th, 2018
+            </p>
+          </li>
+          <li>
+            <p class="text-faded">
+              Confirmation of Attendance due December 1st, 2018
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="col-md-6">
+        <ul>
+          <li>
+            <p class="text-faded">
+              Arrive on January 11th, 2019 in the afternoon
+            </p>
+          </li>
+          <li>
+            <p class="text-faded">
+              Depart anytime on January 20th, 2019
+            </p>
+          </li>
+        <ul>
+      </div> -->
+    </div>
+  </div>
+
+<!--   <div class="container">
+    <div class="row text-center">
+      <a class="btn btn-primary btn-fugu" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+        APPLICATIONS ARE CLOSED
+      </a>
+    </div>
+  </div> -->
+
+
+  <div class="container" id="collapseExample"> 
+    <br />
+    <hr />
+    <%= form_for(@coincidentTroi, :html => {:class => "form-inline"} ) do |f| %>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>
+            Personal Info (Required)
+          </h3>
+          <p class="text-faded">
+            Please let us know who you are! Our main means of contact will be e-mail, so please check it (and your spam folder) regularly.
+          </p>
+          <%= f.label :name, class: 'fugu-width' %>
+          <%= f.text_field :name, class: 'form-control', :required => true %>
+          <br />
+
+          <%= f.label :email, class: 'fugu-width m-5-top' %>
+          <%= f.text_field :email, class: 'form-control m-5-top', :required => true %>
+        </div>
+        <div class="col-md-6">
+          <h3>
+            &nbsp;
+          </h3>
+          <%= f.label :birthday, :required => true, class: 'fugu-width m-5-top' %>
+          <%= f.date_field :birthday, class: 'form-control m-5-top', :required => true %>
+          <br />
+          <%= f.label :address, :required => true, class: 'fugu-width m-5-top' %>
+          <%= f.text_area :address, class: 'form-control m-5-top', :required => true %>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          <h3>
+            Portfolio
+          </h3>
+          <p class="text-faded">
+            *All documents should be linked to via resources like Dropbox and Google Drive. Make sure the documents are accessible to us to view.*
+          </p>
+
+          <p class="text-faded">
+            You may provide 1 - 3 Work Samples, in whatever form/format you feel best represents you. To note: we only require 1 Work Sample, and the number of Work Samples you submit will not negatively affect application.
+          </p>
+          <%= f.label :link1, 'Work Sample 1, Link (Required)', class: ' m-5-top', :required => true %>
+          <%= f.text_field :link1, class: 'form-control', :required => true %>
+          <br />
+          <%= f.label :link2, 'Work Sample 2, Link (Optional)', class: ' m-5-top'  %>
+          <%= f.text_field :link2, class: 'form-control m-5-top' %>
+          <br />
+          <%= f.label :link3, 'Work Sample 3, Link (Optional)', class: ' m-5-top'  %>
+          <%= f.text_field :link3, class: 'form-control m-5-top' %>
+          <br />
+        </div>
+        <div class="col-md-6">
+          <div class="hidden-xs hidden-sm">
+            <h3>
+              &nbsp;
+            </h3>
+          </div>
+          
+          <p class="text-faded">
+            Please provide your website if you have it. If you do not, that is okay, it will not negatively affect your application.
+          </p>
+          <%= f.label 'Website (Optional)' %>
+          <%= f.text_field :website, class: 'form-control' %>
+          <br />
+          <p class="text-faded">
+            
+          </p>
+          <%= f.label :tell_us, "Please tell us about yourself: what have you been up to? what are you interested in? anything you want us to know?" %>
+          <%= f.text_area :tell_us, class: 'form-control' %>
+          <p class="text-faded">
+<!--             Lastly, let us know why are you interested in the festival? (can be brief) -->
+          </p>
+          <%= f.label :why_ams_you, "Lastly, let us know why are you interested in the festival? (can be brief)" %>
+          <%= f.text_area :why_ams_you, class: 'form-control' %>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          <h3>
+            Proposal
+          </h3>
+          <p class="text-faded">
+            what is a primary concept-of-interest for you? could you briefly describe your engagement with it and provide us, if possible, with a link to a passage or essay that articulates it well. (we hope to fold the guest artist concepts-of-interest into our daily discussions).
+          </p>
+          <p class="text-faded">
+            this year, we will be dealing with conversation as artistic labor, mapping as praxis, nomadic movement, and complicity as a mode of critical exchange between others. these are intended to be in service of collectively developing an ethic (or tactics) that is durable, yet malleable - something available for further and future use. part of this includes proposing various activity-pieces to occur during the festival. what would you propose for an activity (one or several)? this, of course, is not binding, and we don’t expect it to (but it might) be the activity you offer at the festival.
+          </p>
+
+        </div>
+        <div class="col-md-6">
+          <h3>
+            &nbsp;
+          </h3>
+          <%= f.label 'Link to your response to the prompt', :required => true, class: ' m-5-top' %>
+          <%= f.text_field :link_to_prompt, class: 'form-control form2', :required => true %>
+
+          <br />
+          <br />
+          <%= f.submit 'SUBMIT APPLICATION', class: 'btn btn-secondary btn-fugu' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

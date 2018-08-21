@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028202607) do
+ActiveRecord::Schema.define(version: 20180821003241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,23 @@ ActiveRecord::Schema.define(version: 20171028202607) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+
+  create_table "coincident_trois", force: :cascade do |t|
+    t.string   "name",             default: "", null: false
+    t.string   "email",            default: "", null: false
+    t.text     "address",          default: "", null: false
+    t.date     "birthday"
+    t.string   "website"
+    t.text     "tell_us",          default: "", null: false
+    t.text     "why_ams_you",      default: "", null: false
+    t.string   "link1",            default: "", null: false
+    t.string   "link2"
+    t.string   "link3"
+    t.string   "link_to_prompt",   default: "", null: false
+    t.string   "how_did_you_hear"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
 
   create_table "coincident_twos", force: :cascade do |t|
     t.string   "name",             default: "", null: false
