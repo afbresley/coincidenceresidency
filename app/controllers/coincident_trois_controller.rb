@@ -15,7 +15,7 @@ class CoincidentTroisController < ApplicationController
     @coincidentTroi = CoincidentTroi.new( coincident_troi_params )
     # debugger
     if @coincidentTroi.save
-      redirect_to home_path
+      redirect_to home_path(id: @coincidentTroi.id)
     else
       render nothing: true
     end
