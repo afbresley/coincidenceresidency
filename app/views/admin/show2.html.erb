@@ -1,0 +1,94 @@
+<section>
+    <h3>
+      <%= @coincidents.count %> applications
+    </h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>
+            when applied
+          </th>
+          <th>
+            name
+          </th>
+          <th>
+            email
+          </th>
+          <th>
+            address
+          </th>
+          <th>
+            birthday (year)
+          </th>
+          <th>
+            website
+          </th>
+          <th>
+            tell_us
+          </th>
+          <th>
+            why are you applying?
+          </th>
+          <th>
+            link_to_prompt
+          </th>
+          <th>
+            portfolio links
+          </th>
+          <th>
+            how_did_you_hear
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @coincidents.each do |coincident| %>
+          <tr>
+            <td>
+              <%= coincident.created_at.strftime("%B %d, %Y") %>
+            </td>
+            <td>
+              <%= coincident.name %>
+            </td>
+            <td>
+              <%= coincident.email %>
+            </td>
+            <td>
+              <%= coincident.address %>
+            </td>
+            <td>
+              <%= coincident.birthday.strftime("%Y") %>
+            </td>
+            <td>
+              <%= coincident.website != '' ? link_to(coincident.website, "http://#{coincident.website}", :target => "_blank") : '-' %>
+            </td>
+            <td>
+              <%= coincident.tell_us %>
+            </td>
+            <td>
+              <%= coincident.why_ams_you %>
+            </td>
+            <td>
+              <%= link_to coincident.link_to_prompt, "http://#{coincident.link_to_prompt}", :target => "_blank" %>
+            </td>
+            <td>
+              <%= link_to(coincident.link1, "http://#{coincident.link1}", :target => "_blank" ) %>
+              <br />
+              <%= coincident.link2 != '' ? link_to(coincident.link2, "http://#{coincident.link2}", :target => "_blank") : '-' %>
+              <br />
+              <%= coincident.link3 != '' ? link_to(coincident.link3, "http://#{coincident.link3}", :target => "_blank") : '-' %>
+            </td>
+            <td>
+              <%= coincident.how_did_you_hear %>
+            </td>
+            <td>
+              This is permanent: be VERY careful.
+              <%= link_to "Delete Application", coincident_two_path(coincident.id), method: 'delete', class: 'btn btn-danger' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+      
+    </table>
+</section>
