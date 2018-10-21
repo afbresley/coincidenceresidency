@@ -58,7 +58,7 @@
               <%= coincident.address %>
             </td>
             <td>
-              <%= coincident.birthday.strftime("%Y") %>
+              <%= !!coincident.birthday ? coincident.birthday.strftime("%Y") : ''%>
             </td>
             <td>
               <%= coincident.website != '' ? link_to(coincident.website, "http://#{coincident.website}", :target => "_blank") : '-' %>
