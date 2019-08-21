@@ -1,0 +1,49 @@
+<section id="application">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-faded">
+          2020 APPLICATION
+        </h2>
+        <hr class="primary">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="text-faded">
+          please see the homepage for details on festival activities, the application, and logistics.
+          <br />
+          or maybe more details go here
+        </p>
+      </div>
+    </div>
+  </div>
+  <br />
+  <hr />
+  <div class="container">
+    <%= form_for(@fourthYear, remote: true, :html => {:class => "form-inline"} ) do |f| %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.label :name, class: 'fugu-width' %>
+        <%= f.text_field :name, class: 'form-control', :required => true %>
+        <br />
+
+        <%= f.label :email, class: 'fugu-width m-5-top' %>
+        <%= f.text_field :email, class: 'form-control m-5-top', :required => true %>
+
+        <%= f.label :proposal_link, class: 'm-5-top' %>
+        <%= f.text_field :proposal_link, class: 'form-control m-5-top', :required => true %>
+        
+      </div>
+      <div class="col-md-6">
+        <%= f.label 'Please let us know a bit more about you', :required => false,class: ' m-5-top' %>
+          <%= f.text_area :about_me, class: 'form-control my-text-box', :required => false %>
+            <br />
+          <%= f.submit 'SUBMIT APPLICATION', class: 'btn btn-secondary btn-fugu btn-2020-fugu' %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</section>

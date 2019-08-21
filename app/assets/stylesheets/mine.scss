@@ -73,6 +73,16 @@ h5 {
   color: white;
 }
 
+.btn-2020-fugu {
+  margin-top: 30px;
+}
+
+@media (min-width: 990px) {
+  .btn-2020-fugu {
+    margin-top: 73px;
+  }
+}
+
 .text-faded {
   a {
     color: white;
@@ -269,4 +279,38 @@ textarea.form-control {
 
 .fugu-link::hover {
   color: #F05F40 !important;
+}
+
+
+
+/* dropdown stuff */
+
+.navbar-nav {
+  color: #777 !important;
+}
+
+.dropdown-toggle {
+  border: none;
+  background: inherit;
+}
+
+.dropdown-menu {
+  background: #e7e7e7;
+  padding: 0 !important;
+}
+
+.dropdown-menu > li {
+  background: #e7e7e7;
+  padding: 5px 0;
+  color: #777;
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+          text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background: #e7e7e7;
+
 }

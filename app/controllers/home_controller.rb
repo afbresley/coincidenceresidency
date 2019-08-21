@@ -4,9 +4,9 @@ class HomeController < ApplicationController
     # @coincidentTwo = CoincidentTwo.new
     
     if params[:id]
-      coincidentTroi = CoincidentTroi.find(params[:id])
-      if coincidentTroi
-        @coincidentTroi = coincidentTroi
+      fourthYear = FourthYear.find(params[:id])
+      if fourthYear
+        @fourthYear = fourthYear
       end
     end
   end

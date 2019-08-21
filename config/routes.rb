@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :coincidents
   resources :coincident_twos
   resources :coincident_trois
+  resources :fourth_years
 
   devise_for :admins
 
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   get '/home/2018-season' => 'home#season2018'
   get '/home/2019-season' => 'home#season2019'
 
-  get '/application' => 'coincident_trois#new', as: 'application'
+  get '/application' => 'fourth_years#new', as: 'application'
   get '/home' => 'home#index'
   get '/joachim' => 'home#joachim'
   
