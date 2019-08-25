@@ -9,7 +9,7 @@
   } 
 }
 
-#details, #who, #about {
+#details, #who, #about, .bg-grey {
   background-color: #eee;
 }
 
@@ -172,7 +172,7 @@ h5 {
   width: 100% !important;
 }
 
-.eventUl {
+.eventUl, .faq-ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -181,6 +181,10 @@ h5 {
       font-size: 12px;
     }
   }
+}
+
+.faq-ul {
+  margin-left: -25px;
 }
 
 .eventWhen {
@@ -279,6 +283,48 @@ textarea.form-control {
 
 .fugu-link::hover {
   color: #F05F40 !important;
+}
+
+
+
+/* dropdown stuff */
+
+.navbar-nav {
+  color: #777 !important;
+}
+
+.dropdown-toggle {
+  border: none;
+  background: inherit;
+}
+
+.dropdown-menu {
+  background: #e7e7e7;
+  padding: 0 !important;
+}
+
+.dropdown-menu > li {
+  background: #e7e7e7;
+  padding: 5px 0;
+  color: #777;
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+          text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background: #e7e7e7;
+}
+
+#intro2020 {
+  padding-bottom: 0;
+  margin-bottom: -15px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
 }
 
 

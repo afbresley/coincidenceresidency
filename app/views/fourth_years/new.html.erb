@@ -1,8 +1,8 @@
-<section id="application">
+<section class="bg-grey">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-faded">
+        <h2 class="section-heading fugu-h3">
           2020 APPLICATION
         </h2>
         <hr class="primary">
@@ -11,39 +11,80 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center">
-        <p class="text-faded">
-          please see the homepage for details on festival activities, the application, and logistics.
-          <br />
-          or maybe more details go here
+      <div class="col-md-10 col-md-offset-1 text-center">
+        <p>
+          To participate in the festival, <b>please submit a proposal for a piece of art, score, music, paper, or any
+          activity</b> that deals with the above questions or complements them in a meaningful way. We plan on engaging
+          with
+          your proposal during the festival.
+        </p>
+        <p>
+          Your submission can be at any stage of development, but should be ready to put into action or at least grow
+          with the group during the festival. These do not necessarily need to be performances or presentations for an
+          audience, though it might be. Try to consider the context of the Festival itself, the other people involved,
+          and how your proposal will activate various potentials throughout; in this way, the festival is much like an
+          experimental composition. Proposals from past years have ranged from ‘searching for intelligence’ at Walden
+          Pond, cooking lunch together, a wine-tasting, improvising together with various collected documentation
+          fragments, creating a sonic map of the gallery, etc.
+        </p>
+        <p>
+          There is no required form or content of the submission, beyond the proposal. So please be as specific and
+          clear as possible, since logistics and balance of aesthetics are things we are considering. (Please make sure
+          luke & aaron can, the first time around, access your proposal.)
+        </p>
+        <p>
+          Issues of race and gender under-representation, among myriad other issues, plague festivals and events like
+          ours. We cannot fix broken system (yet), but we surely cannot ignore these inequalities. So, please let us
+          know something about yourself.
+        </p>
+        <p>
+          aaron & luke will read/listen to/experience all the submissions and come to a decision about whom we will
+          'accept' to this year's co-incidence.
+        </p>
+        <p>
+          We use the quotes around the word accept because this word is a placeholder of sorts. Applications, complicit
+          with acceptances, are fraught with hierarchical power dynamics. Thus accept remains a placeholder for the
+          concept that we would like to offer any and all interested parties (and probably some uninterested!) and the
+          ability to attend. We have, as can be seen, not yet found a solution that is more appropriate and/or
+          effective.
+        </p>
+        <p>
+          Complicating this is the fact we provide minor funding to those whom we can ‘accept’. We are only able to give
+          resources to some, forcing luke & aaron into the role of curators, which neither finds comfortable. In every
+          year, there have been a multitude of great submissions, among whom aaron & luke have rarely agreed upon in
+          individual review. Thankfully, neither of us could do this without the other. Thus 'acceptance' to this
+          festival means that we offer some applicants an amount of capital to offset the cost of participation.
+        </p>
+        <p>
+          As with all years, the festival has an open door for participation: if you’d like to join, please simply come!
         </p>
       </div>
     </div>
   </div>
-  <br />
-  <hr />
+</section>
+<section id="application">
   <div class="container">
-    <%= form_for(@fourthYear, remote: true, :html => {:class => "form-inline"} ) do |f| %>
-    <div class="row">
-      <div class="col-md-6">
-        <%= f.label :name, class: 'fugu-width' %>
-        <%= f.text_field :name, class: 'form-control', :required => true %>
-        <br />
+    <%= form_for(@fourthYear, remote: true, :html => {:class => "form-inline"}) do |f| %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :name, class: 'fugu-width' %>
+          <%= f.text_field :name, class: 'form-control', :required => true %>
+          <br/>
 
-        <%= f.label :email, class: 'fugu-width m-5-top' %>
-        <%= f.text_field :email, class: 'form-control m-5-top', :required => true %>
+          <%= f.label :email, class: 'fugu-width m-5-top' %>
+          <%= f.text_field :email, class: 'form-control m-5-top', :required => true %>
 
-        <%= f.label :proposal_link, class: 'm-5-top' %>
-        <%= f.text_field :proposal_link, class: 'form-control m-5-top', :required => true %>
-        
-      </div>
-      <div class="col-md-6">
-        <%= f.label 'Please let us know a bit more about you', :required => false,class: ' m-5-top' %>
+          <%= f.label :proposal_link, class: 'm-5-top' %>
+          <%= f.text_field :proposal_link, class: 'form-control m-5-top', :required => true %>
+
+        </div>
+        <div class="col-md-6">
+          <%= f.label 'Please let us know a bit more about you', :required => false, class: ' m-5-top' %>
           <%= f.text_area :about_me, class: 'form-control my-text-box', :required => false %>
-            <br />
+          <br/>
           <%= f.submit 'SUBMIT APPLICATION', class: 'btn btn-secondary btn-fugu btn-2020-fugu' %>
+        </div>
       </div>
-    </div>
     <% end %>
   </div>
 </section>

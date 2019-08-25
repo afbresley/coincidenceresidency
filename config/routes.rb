@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get '/application' => 'fourth_years#new', as: 'application'
   get '/home' => 'home#index'
   get '/joachim' => 'home#joachim'
+  get '/faq-2020' => 'home#faq2020'
   
   root to: "home#index"
 

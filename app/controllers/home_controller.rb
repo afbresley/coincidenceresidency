@@ -20,4 +20,7 @@ class HomeController < ApplicationController
   def application
   end
 
+  def faq2020
+  end
+
 end
