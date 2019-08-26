@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row text-center">
       <h1>
-        admin section! 
-      <h1>
+        admin section!
+      </h1>
     </div>
     <div class="row text-center">
       <h4>
@@ -14,134 +14,134 @@
 </section>
 
 <section>
-    <h3>
-      <%= @coincidents.count %> applications
-    </h3>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>
-            when applied
-          </th>
-          <th>
-            name
-          </th>
-          <th>
-            email
-          </th>
-          <th>
-            address
-          </th>
-          <th>
-            birthday
-          </th>
-          <th>
-            website
-          </th>
-          <th>
-            tell_us
-          </th>
-          <th>
-            link_to_prompt
-          </th>
-          <th>
-            portfolio links
-          </th>
-          <th>
-            instruments
-          </th>
-          <th>
-            how_did_you_hear
-          </th>
-          <th>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @coincidents.each do |coincident| %>
-          <tr>
-            <td>
-              <%= coincident.created_at.strftime("%B %d, %Y") %>
-            </td>
-            <td>
-              <%= coincident.name %>
-            </td>
-            <td>
-              <%= coincident.email %>
-            </td>
-            <td>
-              <%= coincident.address %>
-            </td>
-            <td>
-              <%= coincident.birthday %>
-            </td>
-            <td>
-              <%= coincident.website != '' ? link_to(coincident.website, "http://#{coincident.website}", :target => "_blank") : '-' %>
-            </td>
-            <td>
-              <%= coincident.tell_us %>
-            </td>
-            <td>
-              <%= link_to coincident.link_to_prompt, "http://#{coincident.link_to_prompt}", :target => "_blank" %>
-            </td>
-            <td>
-              <%= link_to(coincident.link1, "http://#{coincident.link1}", :target => "_blank" ) %>
-              <br />
-              <%= coincident.link2 != '' ? link_to(coincident.link2, "http://#{coincident.link2}", :target => "_blank") : '-' %>
-              <br />
-              <%= coincident.link3 != '' ? link_to(coincident.link3, "http://#{coincident.link3}", :target => "_blank") : '-' %>
-            </td>
-            <td>
-              <%= coincident.instruments %>
-            </td>
-            <td>
-              <%= coincident.how_did_you_hear %>
-            </td>
-            <td>
-              This is permanent: be VERY careful.
-              <%= link_to "Delete Application", coincident_two_path(coincident.id), method: 'delete', class: 'btn btn-danger' %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-      <thead>
-        <tr>
-          <th>
-            when applied
-          </th>
-          <th>
-            name
-          </th>
-          <th>
-            email
-          </th>
-          <th>
-            address
-          </th>
-          <th>
-            birthday
-          </th>
-          <th>
-            website
-          </th>
-          <th>
-            tell_us
-          </th>
-          <th>
-            link_to_prompt
-          </th>
-          <th>
-            portfolio links
-          </th>
-          <th>
-            instruments
-          </th>
-          <th>
-            how_did_you_hear
-          </th>
-          <th>
-          </th>
-        </tr>
-      </thead>
-    </table>
+  <h3>
+    <%= @coincidents.count %> applications
+  </h3>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>
+        when applied
+      </th>
+      <th>
+        name
+      </th>
+      <th>
+        email
+      </th>
+      <th>
+        address
+      </th>
+      <th>
+        birthday
+      </th>
+      <th>
+        website
+      </th>
+      <th>
+        tell_us
+      </th>
+      <th>
+        link_to_prompt
+      </th>
+      <th>
+        portfolio links
+      </th>
+      <th>
+        instruments
+      </th>
+      <th>
+        how_did_you_hear
+      </th>
+      <th>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @coincidents.each do |coincident| %>
+      <tr>
+        <td>
+          <%= coincident.created_at.strftime("%B %d, %Y") %>
+        </td>
+        <td>
+          <%= coincident.name %>
+        </td>
+        <td>
+          <%= coincident.email %>
+        </td>
+        <td>
+          <%= coincident.address %>
+        </td>
+        <td>
+          <%= coincident.birthday %>
+        </td>
+        <td>
+          <%= coincident.website != '' ? link_to(coincident.website, "http://#{coincident.website}", :target => "_blank") : '-' %>
+        </td>
+        <td>
+          <%= coincident.tell_us %>
+        </td>
+        <td>
+          <%= link_to coincident.link_to_prompt, "http://#{coincident.link_to_prompt}", :target => "_blank" %>
+        </td>
+        <td>
+          <%= link_to(coincident.link1, "http://#{coincident.link1}", :target => "_blank") %>
+          <br/>
+          <%= coincident.link2 != '' ? link_to(coincident.link2, "http://#{coincident.link2}", :target => "_blank") : '-' %>
+          <br/>
+          <%= coincident.link3 != '' ? link_to(coincident.link3, "http://#{coincident.link3}", :target => "_blank") : '-' %>
+        </td>
+        <td>
+          <%= coincident.instruments %>
+        </td>
+        <td>
+          <%= coincident.how_did_you_hear %>
+        </td>
+        <td>
+          This is permanent: be VERY careful.
+          <%= link_to "Delete Application", coincident_two_path(coincident.id), method: 'delete', class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+    <thead>
+    <tr>
+      <th>
+        when applied
+      </th>
+      <th>
+        name
+      </th>
+      <th>
+        email
+      </th>
+      <th>
+        address
+      </th>
+      <th>
+        birthday
+      </th>
+      <th>
+        website
+      </th>
+      <th>
+        tell_us
+      </th>
+      <th>
+        link_to_prompt
+      </th>
+      <th>
+        portfolio links
+      </th>
+      <th>
+        instruments
+      </th>
+      <th>
+        how_did_you_hear
+      </th>
+      <th>
+      </th>
+    </tr>
+    </thead>
+  </table>
 </section>

@@ -1,0 +1,50 @@
+<section>
+</section>
+<section></section>
+<div>
+  <h3>
+    <%= @coincidents.count %> people have applied
+  </h3>
+</div>
+<section>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>
+        created at
+      </th>
+      <th>
+        name
+      </th>
+      <th>
+        email
+      </th>
+      <th>
+        proposal link
+      </th>
+      <th>
+        about me
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @coincidents.each do |coincident| %>
+      <td>
+        <%= coincident.created_at.strftime("%B %d, %Y") %>
+      </td>
+      <td>
+        <%= coincident.name %>
+      </td>
+      <td>
+        <%= coincident.email %>
+      </td>
+      <td>
+        <%= coincident.proposal_link %>
+      </td>
+      <td>
+        <%= coincident.about_me %>
+      </td>
+    <% end %>
+    </tbody>
+  </table>
+</section>
