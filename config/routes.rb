@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   get '/home/2018-season' => 'home#season2018'
   get '/home/2019-season' => 'home#season2019'
 
-  get '/application' => 'fourth_years#new', as: 'application'
+  # get '/application' => 'fourth_years#new', as: 'application'
+  get '/application' => 'home#index'
   get '/home' => 'home#index'
   get '/joachim' => 'home#joachim'
   get '/faq-2020' => 'home#faq2020'
