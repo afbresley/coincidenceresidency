@@ -1,0 +1,21 @@
+<div class="row guest-artist-row">
+  <div class="col-xs-12 col-sm-3">
+    <div class="guest-artist-img">
+      <%= image_tag asset_url(local_assigns[:imageUrl]) %>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-9 centered-xs guest-link">
+    <% if !local_assigns[:website] %>
+      <h4 class="black"> <%= local_assigns[:name] %> </h4>
+    <% else %>
+      <h4>
+        <%= link_to(local_assigns[:name], local_assigns[:website], :target => "_blank") %>
+      </h4>
+    <% end %>
+  </div>
+  <div class="col-xs-12 col-sm-9 centered-xs">
+    <p class="text-faded">
+      <%= local_assigns[:description] %>
+    </p>
+  </div>
+</div>
