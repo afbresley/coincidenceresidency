@@ -17,13 +17,14 @@ Rails.application.routes.draw do
   get '/home/2018-season' => 'home#season2018'
   get '/home/2019-season' => 'home#season2019'
   get '/home/2020-season' => 'home#season2020'
+  get '/schedule' => 'home#schedule'
 
   # get '/application' => 'fourth_years#new', as: 'application'
   get '/application' => 'home#index'
   get '/home' => 'home#index'
   get '/joachim' => 'home#joachim'
   get '/faq-2020' => 'home#faq2020'
-  
+
   root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

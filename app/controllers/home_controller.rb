@@ -26,4 +26,7 @@ class HomeController < ApplicationController
   def faq2020
   end
 
+  def schedule
+  end
+
 end
