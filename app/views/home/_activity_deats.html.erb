@@ -11,14 +11,16 @@
   <div class="col-xs-8">
     <% if local_assigns[:is_concert] %>
       <i>
-        <p>
-          <b><%= local_assigns[:title1] %> </b>
-        </p>
-        <% if local_assigns[:title2] %>
+        <a href="<%= local_assigns[:concert_link] %>" target="_blank">
           <p>
-            <%= local_assigns[:title2] %>
+            <b><%= local_assigns[:title1] %> </b>
           </p>
-        <% end %>
+          <% if local_assigns[:title2] %>
+            <p>
+              <%= local_assigns[:title2] %>
+            </p>
+          <% end %>
+        </a>
       </i>
     <% else %>
       <p>
