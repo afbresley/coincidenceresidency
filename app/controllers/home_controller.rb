@@ -14,8 +14,8 @@ class HomeController < ApplicationController
   def season2017
   end
 
-  # def season2020
-  # end
+  def season2020
+  end
 
   def joachim
   end
