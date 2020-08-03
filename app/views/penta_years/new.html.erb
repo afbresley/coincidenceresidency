@@ -1,0 +1,78 @@
+<section class="bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading fugu-h3">
+          2021 APPLICATION
+        </h2>
+        <hr class="primary">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 text-center">
+        description and whatnot goes here
+      </div>
+    </div>
+  </div>
+</section>
+<section id="application">
+  <div class="container">
+    <%= form_for(@penta_year, remote: true, :html => {:class => "form-inline form-group"}) do |f| %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :name, 'Name *', class: 'fugu-width' %>
+          <%= f.text_field :name, class: 'form-control m-5-top', :required => true %>
+
+          <%= f.label :email, 'Email *', class: 'fugu-width m-15-top' %>
+          <%= f.text_field :email, class: 'form-control m-5-top', :required => true %>
+
+        </div>
+        <div class="col-md-6">
+          <%= f.label :proposal_link, 'Proposal link *', class: 'm-15-top' %>
+          <p class="small-text">(Please please make sure this is unlocked so we can review it without emailing you for
+            permission!)</p>
+          <%= f.text_field :proposal_link, class: 'form-control m-5-top', :required => true %>
+        </div>
+      </div>
+      <hr class="secondary">
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :about_me,
+                      "Issues of race and gender under-representation, among myriad other issues, plague festivals and events like ours. We cannot fix broken system (yet), but we surely cannot ignore these inequalities. So, please let us know something about yourself.",
+                      :required => false,
+                      class: 'm-15-top'
+          %>
+          <%= f.text_area :about_me, :required => false, class: 'm-5-top form-control my-text-box' %>
+
+          <%= f.label :attendance_capacity, 'Attendance Capacity *', class: 'm-15-top' %>
+          <%= f.select :attendance_capacity,
+                       ["In-Person", "Virtual", "Combo", "Not sure, but add me to the list!"],
+                       {
+                           prompt: '--select one--'
+                       },
+                       {
+                           class: 'form-control',
+                           required: true,
+
+                       }
+          %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :website, class: 'fugu-width m-15-top' %>
+          <%= f.text_field :website, class: 'form-control m-5-top', :required => false %>
+
+          <%= f.label :location, class: 'fugu-width m-15-top' %>
+          <%= f.text_field :location, class: 'form-control m-5-top', :required => false %>
+
+          <%= f.label :why, "Tell us a bit more about why you're interesting in applying", :required => false, class: 'm-15-top' %>
+          <%= f.text_area :why, :required => false, class: 'm-5-top form-control my-text-box' %>
+        </div>
+        <div class="col-md-12">
+          <%= f.submit 'SUBMIT APPLICATION', class: 'btn btn-secondary btn-fugu btn-2021-fugu' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

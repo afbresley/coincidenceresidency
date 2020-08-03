@@ -4,9 +4,9 @@ class HomeController < ApplicationController
     # @coincidentTwo = CoincidentTwo.new
     
     if params[:id]
-      fourthYear = FourthYear.find(params[:id])
-      if fourthYear
-        @fourthYear = fourthYear
+      penta_year = PentaYear.find(params[:id])
+      if penta_year
+        @penta_year = penta_year
       end
     end
   end
