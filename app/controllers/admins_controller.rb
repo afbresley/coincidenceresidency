@@ -11,8 +11,8 @@ class AdminsController < ApplicationController
 
     # @coincidents = Coincident.all.order(:name)
 
-    @coincidents = FourthYear.all.order(:created_at)
-    render 'admin/show_fourth_year', admin: current_admin.id, @coincidents => @coincidents
+    @coincidents = PentaYear.all.order(:created_at)
+    render 'admin/show_penta_year', admin: current_admin.id, @coincidents => @coincidents
   end
 
 end

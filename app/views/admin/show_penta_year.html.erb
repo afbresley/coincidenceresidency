@@ -1,0 +1,74 @@
+<section>
+  <div>
+    <h3>
+      <%= @coincidents.count %> mustachios have applied
+    </h3>
+  </div>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>
+        applied at
+      </th>
+      <th>
+       name
+      </th>
+      <th>
+       proposal_link
+      </th>
+      <th>
+       email
+      </th>
+      <th>
+       about_me
+      </th>
+      <th>
+       attendance_capacity
+      </th>
+      <th>
+       website
+      </th>
+      <th>
+       location
+      </th>
+      <th>
+       why
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @coincidents.each do |coincident| %>
+      <tr>
+        <td>
+          <%= coincident.created_at.strftime("%B %d, %Y") %>
+        </td>
+        <td>
+          <%= coincident.name %>
+        </td>
+        <td>
+          <%= coincident.proposal_link %>
+        </td>
+        <td>
+          <%= coincident.email %>
+        </td>
+        <td>
+          <%= coincident.about_me %>
+        </td>
+        <td>
+          <%= coincident.attendance_capacity %>
+        </td>
+        <td>
+          <%= coincident.website %>
+        </td>
+        <td>
+          <%= coincident.location %>
+        </td>
+        <td>
+          <%= coincident.why %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</section>
