@@ -1,18 +1,22 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '4.2.7'
-gem 'pg', '~> 0.15'
-gem 'sass-rails', '~> 5.0'
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+ruby '2.7.1'
 
-gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+gem 'pg', '>= 0.18', '< 2.0'
+gem 'sass-rails'
+gem 'bootstrap-sass'
+gem 'uglifier'
+# gem 'coffee-rails'
 
-gem 'devise', '~> 3.4.0'
+# gem 'jquery-rails'
+# gem 'turbolinks'
+gem 'turbolinks', '~> 5.2.0'
+# gem 'jbuilder'
+# gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem 'devise'
 gem "figaro"
 
 group :development, :test do
@@ -20,11 +24,11 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
-  gem 'quiet_assets'
+  # gem 'quiet_assets'
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
   gem 'spring'
 end
 

@@ -19,16 +19,17 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <%= form_for(@penta_year, remote: true, :html => {:class => "form-inline form-group"}) do |f| %>
+          <%= token_tag %>
           <div class="row">
             <div class="col-md-6">
               <%= f.label :name, 'Name *', class: 'fugu-width' %>
               <%= f.text_field :name, class: 'form-control m-5-top', :required => true %>
 
-              <%= f.label :proposal_link, 'Proposal link *', class: 'm-15-top' %>
+              <%= f.label :proposal_link, 'Proposal link', class: 'm-15-top' %>
               <p class="small-text">(Please please make sure this is unlocked so we can review it without emailing you
                 for
                 permission!)</p>
-              <%= f.text_field :proposal_link, class: 'form-control m-5-top', :required => true %>
+              <%= f.text_field :proposal_link, class: 'form-control m-5-top', :required => false %>
             </div>
             <div class="col-md-6">
               <%= f.label :email, 'Email *', class: 'fugu-width' %>
