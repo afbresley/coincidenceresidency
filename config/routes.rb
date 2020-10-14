@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   get '/home/2020-season' => 'home#season2020'
   get '/schedule' => 'home#schedule'
 
-  get '/application' => 'penta_years#new', as: 'application'
-  # get '/application' => 'home#index'
+  # get '/application' => 'penta_years#new', as: 'application'
+  get '/application' => 'home#index'
   get '/home' => 'home#index'
   get '/joachim' => 'home#joachim'
   get '/faq-2020' => 'home#faq2020'
