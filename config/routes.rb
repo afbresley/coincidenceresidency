@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/2018-season' => 'home#season2018'
   get '/2019-season' => 'home#season2019'
   get '/2020-season' => 'home#season2020'
+  get '/2021-season' => 'home#season2021'
 
   get '/home/2017-season' => 'home#season2017'
   get '/home/2018-season' => 'home#season2018'
